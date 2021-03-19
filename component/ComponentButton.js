@@ -9,7 +9,7 @@ const ComponentButton = (props) => {
             <TouchableOpacity style={styles.btn} onPress={props.onPress}>
             <Text style={styles.text3}>{props.label}</Text>
             </TouchableOpacity>
-    </View>
+    </View>    
     )
 }
 const styles = StyleSheet.create({
