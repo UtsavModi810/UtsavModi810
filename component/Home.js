@@ -29,7 +29,7 @@ function Home({ navigation }) {
                             <Text style={styles.email}>{item.email}</Text>
                         </View>
                         <TouchableOpacity
-                            onPress={() => navigation.navigate('HomeDetail',{item})}>
+                            onPress={() => navigation.navigate('HomeDetail',item)}>
                             
                             <Right
                                 name="keyboard-arrow-right"
