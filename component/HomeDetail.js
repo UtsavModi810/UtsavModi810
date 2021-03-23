@@ -1,10 +1,14 @@
 import React from 'react';
-import { Text, View } from 'react-native';
+import { Text, View,Image, ImageComponent } from 'react-native';
 
-function HomeDetail({ navigation }) {
+function HomeDetail({ navigation,route }) {
+    const {  photo,name,email  } = route.params;
+ 
     return (
         <View>
-            <Text>{ navigation.getParam('name') }</Text>
+            <Image source ={ photo }></Image>
+            <Text>{ name }</Text>
+            <Text>{ email }</Text>
         </View>
     )
 }

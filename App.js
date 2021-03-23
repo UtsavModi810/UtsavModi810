@@ -1,12 +1,6 @@
-<<<<<<< HEAD
-import React, { useState, useEffect } from 'react';
 import Register from "./component/Register";
 import Login from "./component/Login";
-=======
 import React,{useState,useEffect} from 'react';
-import Register from "./component/Register";
-import Login  from "./component/Login";
->>>>>>> c8c8b50cb8a44cf1bb183487a51291b3eacaff42
 import Home from "./component/Home";
 import 'react-native-gesture-handler';
 import { NavigationContainer } from '@react-navigation/native';
@@ -24,7 +18,7 @@ const App = () => {
     setTimeout(async () => {
       setSplash(false);
     }, 8000);
-  }, []);
+  }, []); 
   if (Splash) {
     return (<Splashscreen />)
   }
@@ -38,16 +32,11 @@ const App = () => {
           headerShown: false
 
         }} />
-<<<<<<< HEAD
+
         <Stack.Screen name="Register" component={Register} options={{}} />
         <Stack.Screen name="HomeDetail" component={HomeDetail} options={{}} />
         <Stack.Screen name="Home" component={Home} options={{}} />
 
-=======
-        <Stack.Screen name="Register" component={Register} options={{}}/>
-        <Stack.Screen name="Home" component={Home} options={{}}/>
-       
->>>>>>> c8c8b50cb8a44cf1bb183487a51291b3eacaff42
       </Stack.Navigator>
     </NavigationContainer>
   );
