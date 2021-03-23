@@ -3,8 +3,10 @@ import {
   Platform, StyleSheet, View, Text,
   Image,
 } from 'react-native';
+import AsyncStorage from '@react-native-community/async-storage'
 
 const SplashScreen = ({navigation}) =>  {
+  
 
     return (
       <View style={styles.SplashScreen_RootView}>

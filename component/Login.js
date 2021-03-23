@@ -3,12 +3,19 @@ import { View, StyleSheet, Text, ScrollView } from 'react-native';
 import Input from './Input'
 import ComponentButton from './ComponentButton'
 import ComponentImage from './ComponentImage'
+// import AsyncStorage from '@react-native-community/async-storage'
 
 
 
 class Login extends Component {
+    // state = {
+    //     email:"",
+    //     password:"",
+    //     token:"",
+    // }
     constructor(props) {
         super(props);
+        // this.getData();
         this.state = {
             email: '',
             emailError: '',
@@ -17,7 +24,57 @@ class Login extends Component {
             isPasswordValidation: false,
         }
     }
+    // onLogout = async () => {
+    //     try{
+    //         this.setState({token:""})
+    //         //await AsyncStorage.removeItem('token')
+    //         await AsyncStorage.clear()
+    //     }
+    //     catch(error){
+    //         console.log(error)
+    //     }
 
+    // }
+    // onSubmit = async () => { 
+    //     try{
+
+    //         await this.setState({token:'abc12@gmail.com'}) 
+    //         // await AsyncStorage.setItem('email',this.state.email)
+    //         // await AsyncStorage.setItem('token','abc12@gmail.com')
+    //         // await AsyncStorage.multiSet([['email',this.state.email],
+    //         // ['token','abc12@gmail.com']])
+
+
+    //         await AsyncStorage.setItem('userprofile',JSON.stringify({ email: this.state.email, token: this.state.token}))
+            
+
+    //     }catch(error){
+    //         console.log(error)
+    //     }
+        
+    // }
+    // getData = async () => {
+    //     try{
+    //         // const value = await AsyncStorage,getItem('token')
+    //         // const email = await AsyncStorage,getItem('email')
+    //         const userprofile =await AsyncStorage.getItem('userprofile')
+    //         const userprofile =JSON.parse(userprofile)
+            
+    //         if(userprofile!==null){
+    //             this.setState({ ...userprofile })
+
+    //         }
+    //         if(email!==null){
+    //             this.setState({ email })
+
+    //         }
+    //     }
+    //     catch(e){
+         
+                 
+    //     }
+    // }
+    
 
     allFieldValidation = () => {
         const {  email, password } = this.state
@@ -57,7 +114,7 @@ class Login extends Component {
                     )}
 
 
-                    <Input iconName="lock" placeholder="Enter password" visible='true' onChangeText={(text) => { this.validatePassword(text) }} />
+                    <Input iconName="lock" placeholder="Enter password"  visible='true' onChangeText={(text) => { this.validatePassword(text) }} />
                     {this.state.isPasswordValidation ? (
                         <Text style={{ color: 'red'}}>
                             {this.state.PasswordError}
@@ -111,7 +168,7 @@ class Login extends Component {
         }
     }
    
-}
+};
 
 const styles = StyleSheet.create({
     container: {
