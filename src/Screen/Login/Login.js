@@ -1,10 +1,9 @@
 import React, { Component } from 'react';
 import { View, StyleSheet, Text, ScrollView } from 'react-native';
-import Input from './Input'
-import ComponentButton from './ComponentButton'
-import ComponentImage from './ComponentImage'
-// import AsyncStorage from '@react-native-community/async-storage'
-
+import Input from '../../component/Input/Input'
+import ComponentButton from '../../component/Button/ComponentButton'
+import ComponentImage from '../../component/Image/ComponentImage'
+import AsyncStorage from '@react-native-community/async-storage'
 
 
 class Login extends Component {
@@ -90,8 +89,8 @@ class Login extends Component {
     
       making_api_call_all_fields = () => {
         if (this.allFieldValidation()) {
-          alert("SuccessFully login")
-          this.props.navigation.navigate('Home');
+        
+          this.props.navigation.navigate('Auth',{email:this.state.email,password:this.state.password });
         }
       }
 

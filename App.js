@@ -1,12 +1,13 @@
-import Register from "./component/Register";
-import Login from "./component/Login";
+import Login from "./src/Screen/Login/Login";
+import Register from "./src/Screen/Register/Register";
 import React,{useState,useEffect} from 'react';
-import Home from "./component/Home";
+import Home from "./src/Screen/Home/Home";
 import 'react-native-gesture-handler';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
-import Splashscreen from './Screen/Splashscreen';
-import HomeDetail from './component/HomeDetail';
+import Splashscreen from './src/Screen/SplashScreen/Splashscreen';
+import HomeDetail from './src/Screen/HomeDetail/HomeDetail';
+import Auth from './src/Authentication/Auth';
 
 
 
@@ -25,15 +26,14 @@ const App = () => {
   return (
     // <SplashScreen/>
     <NavigationContainer>
-      <Stack.Navigator
-        initialRouteName="Home"
-      >
+      <Stack.Navigator>
         <Stack.Screen name="Login" component={Login} options={{
           headerShown: false
 
         }} />
 
         <Stack.Screen name="Register" component={Register} options={{}} />
+        <Stack.Screen name="Auth" component={Auth} options={{}} />
         <Stack.Screen name="HomeDetail" component={HomeDetail} options={{}} />
         <Stack.Screen name="Home" component={Home} options={{}} />
 

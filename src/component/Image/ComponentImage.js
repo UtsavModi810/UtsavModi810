@@ -7,7 +7,7 @@ const ComponentImage = () => {
         <View style={styles.StyleSheet}>
         <Image
         style={styles.tinyLogo}
-        source={require('../component/img/Logo-porter.png')} />
+        source={require('../../assets/img/Logo-porter.png')} />
       
           </View>
     )

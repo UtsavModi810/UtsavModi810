@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
 import { View, StyleSheet, Text, ScrollView } from 'react-native';
-import Input from './Input'
-import ComponentImage from './ComponentImage';
-import ComponentButton from './ComponentButton';
-import Pickers from './Picker';
+import Input from '../../component/Input/Input'
+import ComponentImage from '../../component/Image/ComponentImage';
+import ComponentButton from '../../component/Button/ComponentButton';
+import Pickers from '../../component/Picker/Picker';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 
 class Register extends Component {
     constructor(props) {
@@ -52,6 +53,21 @@ class Register extends Component {
   
     making_api_call_all_fields = () => {
       if (this.allFieldValidation()) {
+
+          
+    let obj = {
+      Firstname: this.state.firstname,
+      lastname: this.state.lastname,
+      email: this.state.email,
+      mobileno:this.state.mobileno,
+      country:this.state.country,
+      password:this.state.password,
+      
+    };
+    console.log('reg--',obj)
+    /*AsyncStorage.setItem('user',user);*/
+    AsyncStorage.setItem('Register', JSON.stringify(obj));
+
         alert("SuccessFully Registration")
         this.props.navigation.navigate('Login');
       }

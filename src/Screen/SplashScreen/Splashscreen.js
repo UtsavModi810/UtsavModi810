@@ -11,7 +11,7 @@ const SplashScreen = ({navigation}) =>  {
     return (
       <View style={styles.SplashScreen_RootView}>
        
-         <Image source={require('../component/img/splashScreen.gif')} style={styles.logo}/>
+         <Image source={require('../../assets/img/splashScreen.gif')} style={styles.logo}/>
       
         <View style={styles.footer}>
           <Text style={styles.footerText}>By Team{"\n"}  Porter</Text>

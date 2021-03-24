@@ -1,15 +1,15 @@
 import React, { useState } from 'react';
 import { FlatList, StyleSheet, View, Text, Image, Button, TouchableOpacity } from 'react-native';
 import Right from 'react-native-vector-icons/dist/MaterialIcons';
-import ComponentButton from './ComponentButton';
+import ComponentButton from '../../component/Button/ComponentButton';
 
 
 function Home({ navigation }) {
 
     const [people, setpeople] = useState([
-        { photo: require('./img/ironman.jpg'), name: 'IRON MAN ', email: 'i@gmail.com', id: '1' },
-        { photo: require('./img/hulk1.jpg'), name: 'HULK', email: 'h@gmail.com', id: '2' },
-        { photo: require('./img/captain.jpg'), name: 'CAPTAIN AMERICA', email: 'c@gmail.com', id: '3' },
+        { photo: require('../../assets/img/ironman.jpg'), name: 'IRON MAN ', email: 'i@gmail.com', id: '1' },
+        { photo: require('../../assets/img//hulk1.jpg'), name: 'HULK', email: 'h@gmail.com', id: '2' },
+        { photo: require('../../assets/img/captain.jpg'), name: 'CAPTAIN AMERICA', email: 'c@gmail.com', id: '3' },
 
     ]);
 
