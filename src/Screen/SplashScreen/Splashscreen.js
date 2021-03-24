@@ -1,65 +1,47 @@
 import React, { Component } from 'react';
-import {
-  Platform, StyleSheet, View, Text,
-  Image,
-} from 'react-native';
+import { StyleSheet, View,Image,} from 'react-native';
 import AsyncStorage from '@react-native-community/async-storage'
 
-const SplashScreen = ({navigation}) =>  {
-  
+const SplashScreen = ({ navigation }) => {
 
-    return (
-      <View style={styles.SplashScreen_RootView}>
-       
-         <Image source={require('../../assets/img/splashScreen.gif')} style={styles.logo}/>
-      
-        <View style={styles.footer}>
-          <Text style={styles.footerText}>By Team{"\n"}  Porter</Text>
-        </View>
-       
-      </View>
-    );
-  }
+
+  return (
+    <View style={styles.SplashScreen_RootView}>
+
+      <Image source={require('../../assets/img/truck.gif')} style={styles.logo} />
+
+    </View>
+  );
+}
 
 const styles = StyleSheet.create(
   {
     SplashScreen_RootView:
     {
       justifyContent: 'center',
-      flex: 1,
+
       // marginTop: 60,  
       position: 'absolute',
       width: '100%',
       height: '100%',
-      backgroundColor:'#fff',
+      backgroundColor: '#fff',
       alignItems: 'center',
-      paddingTop: (Platform.OS === 'ios') ? 20 : 0
-    },
-    SplashScreen_ChildView:  
-    {  
-        justifyContent: 'center',  
-        alignItems: 'center',  
-        backgroundColor: '#00BCD4',  
-        flex:1,  
-    },  
-    logo: {
-      height:200,
-      width:'80%',
-      // marginTop:40,
-      // marginLeft:30,
-      alignItems:'center'
 
     },
-   footer:{
-     position:'absolute',
- 
-     bottom:50,
-     
-   },
-   footerText:{
-   
-    color: '#6f6e92',
- 
-   }
-  });  
+    SplashScreen_ChildView:
+    {
+      justifyContent: 'center',
+      alignItems: 'center',
+      backgroundColor: '#00BCD4',
+      flex: 1,
+    },
+    logo: {
+      height: '50%',
+      width: '100%',
+      alignItems: 'center'
+
+    },
+
+
+  });
 export default SplashScreen;

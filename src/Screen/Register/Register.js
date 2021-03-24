@@ -56,10 +56,10 @@ class Register extends Component {
 
           
     let obj = {
-      Firstname: this.state.firstname,
+      firstname: this.state.firstname,
       lastname: this.state.lastname,
       email: this.state.email,
-      mobileno:this.state.mobileno,
+      mobileno:this.state.phone,
       country:this.state.country,
       password:this.state.password,
       

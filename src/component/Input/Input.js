@@ -7,7 +7,7 @@ const Input = (props) => {
     return (
         <View style={styles.inputview}>
                         <Iconc name={props.iconName} style={styles.ic} />
-                        <TextInput style={styles.input} placeholder={props.placeholder} secureTextEntry={Boolean(props.visible)} onChangeText={props.onChangeText}/>
+                        <TextInput style={styles.input} placeholder={props.placeholder} secureTextEntry={Boolean(props.visible)} onChangeText={props.onChangeText} value={props.value}/>
                     </View>
     )
 }

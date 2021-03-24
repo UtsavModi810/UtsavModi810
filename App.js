@@ -8,6 +8,7 @@ import { createStackNavigator } from '@react-navigation/stack';
 import Splashscreen from './src/Screen/SplashScreen/Splashscreen';
 import HomeDetail from './src/Screen/HomeDetail/HomeDetail';
 import Auth from './src/Authentication/Auth';
+import UserProfile from "./src/Screen/UserProfile/UserProfile";
 
 
 
@@ -33,9 +34,10 @@ const App = () => {
         }} />
 
         <Stack.Screen name="Register" component={Register} options={{}} />
-        <Stack.Screen name="Auth" component={Auth} options={{}} />
+        <Stack.Screen name="Auth" component={Auth} options={{ headerShow:false }} />
         <Stack.Screen name="HomeDetail" component={HomeDetail} options={{}} />
-        <Stack.Screen name="Home" component={Home} options={{}} />
+        <Stack.Screen name="Home" component={Home} options={{ }} />
+        <Stack.Screen name="UserProfile" component={UserProfile} options={{ }} />
 
       </Stack.Navigator>
     </NavigationContainer>
