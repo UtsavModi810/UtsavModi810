@@ -1,6 +1,6 @@
 import { Component } from "react";
 import React from 'react';
-
+import styles from './style';
 import Input from '../../component/Input/Input'
 import ComponentButton from '../../component/Button/ComponentButton';
 import AsyncStorage from '@react-native-async-storage/async-storage';
@@ -62,40 +62,13 @@ class UserProfile extends Component {
                         <Input iconName="person-pin-circle" value={this.state.lastname} />
                         <Input iconName="email" value={this.state.email} />
                         <Input iconName="contact-page" value={this.state.mobileno} />
-                        <ComponentButton label="LOGOUT" />
+                        <ComponentButton label="LOGOUT" onPress={() => this.props.navigation.navigate('Login')} />
                     </View>
                 </View>
             </ScrollView>
         )
     }
 }
-const styles = StyleSheet.create({
-    container: {
-        backgroundColor: '#161616',
-        height:'100%',
-        width:'100%',
 
-    },
-    text:{
-        marginTop:60,
-        fontSize:50,
-        fontWeight:'bold',
-        alignSelf:'center',
-        color: '#ffffff',
-
-    },
-    header: {
-        height: 200,
-    },
-    footer: {
-        height:600,
-        paddingTop:80,
-        alignItems: 'center',
-        backgroundColor: '#ffffff',
-        borderTopLeftRadius: 80,
-    },
-   
-
-});
 
 export default UserProfile;

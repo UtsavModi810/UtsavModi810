@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { View, StyleSheet, Text, ScrollView } from 'react-native';
+import styles from './style';
 import Input from '../../component/Input/Input'
 import ComponentButton from '../../component/Button/ComponentButton';
 import Pickers from '../../component/Picker/Picker';
@@ -271,32 +272,6 @@ class Register extends Component {
   }
 }
 
-const styles = StyleSheet.create({
-  container: {
-    backgroundColor: '#161616',
-    height: '100%',
-    width: '100%',
 
-  },
-  text: {
-    marginTop: 20,
-    fontSize: 50,
-    fontWeight: 'bold',
-    alignSelf: 'center',
-    color: '#ffffff',
-
-  },
-  header: {
-    height: 120,
-  },
-  footer: {
-    height: 1000,
-    paddingTop: 80,
-    alignItems: 'center',
-    backgroundColor: '#ffffff',
-    borderTopLeftRadius: 80,
-  },
-
-});
 
 export default Register;
