@@ -2,7 +2,6 @@ import { Component } from "react";
 import React from 'react';
 
 import Input from '../../component/Input/Input'
-import ComponentImage from '../../component/Image/ComponentImage'
 import ComponentButton from '../../component/Button/ComponentButton';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { View,Text,StyleSheet } from "react-native";
@@ -52,7 +51,7 @@ class UserProfile extends Component {
     render() {
         return (
             <View style={styles.container}>
-                <ComponentImage/>
+               
                 <Text style={styles.text}> User Detail </Text>
                 <Input iconName="person-pin-circle" value={this.state.firstname} />
                 <Input iconName="person-pin-circle" value={this.state.lastname}/>

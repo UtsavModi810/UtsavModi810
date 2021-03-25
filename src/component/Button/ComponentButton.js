@@ -14,19 +14,21 @@ const ComponentButton = (props) => {
 }
 const styles = StyleSheet.create({
     container: {
+       
         flex: 1,
         backgroundColor: "#fff",
         alignItems: "center",
         justifyContent: "center",
     },
-    btn: {
+    btn: { 
         alignItems: "center",
         justifyContent: "center",
         backgroundColor: "#a4ebf3",
-        padding: 20,
         fontWeight: 'bold',
         borderRadius: 20,
         borderWidth: 2,
+        width:150 ,
+        height:70,
 
     },
     text3: {

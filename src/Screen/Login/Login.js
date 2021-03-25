@@ -2,16 +2,11 @@ import React, { Component } from 'react';
 import { View, StyleSheet, Text, ScrollView } from 'react-native';
 import Input from '../../component/Input/Input'
 import ComponentButton from '../../component/Button/ComponentButton'
-import ComponentImage from '../../component/Image/ComponentImage'
 import AsyncStorage from '@react-native-community/async-storage'
 
 
 class Login extends Component {
-    // state = {
-    //     email:"",
-    //     password:"",
-    //     token:"",
-    // }
+   
     constructor(props) {
         super(props);
         // this.getData();
@@ -23,58 +18,7 @@ class Login extends Component {
             isPasswordValidation: false,
         }
     }
-    // onLogout = async () => {
-    //     try{
-    //         this.setState({token:""})
-    //         //await AsyncStorage.removeItem('token')
-    //         await AsyncStorage.clear()
-    //     }
-    //     catch(error){
-    //         console.log(error)
-    //     }
-
-    // }
-    // onSubmit = async () => { 
-    //     try{
-
-    //         await this.setState({token:'abc12@gmail.com'}) 
-    //         // await AsyncStorage.setItem('email',this.state.email)
-    //         // await AsyncStorage.setItem('token','abc12@gmail.com')
-    //         // await AsyncStorage.multiSet([['email',this.state.email],
-    //         // ['token','abc12@gmail.com']])
-
-
-    //         await AsyncStorage.setItem('userprofile',JSON.stringify({ email: this.state.email, token: this.state.token}))
-            
-
-    //     }catch(error){
-    //         console.log(error)
-    //     }
-        
-    // }
-    // getData = async () => {
-    //     try{
-    //         // const value = await AsyncStorage,getItem('token')
-    //         // const email = await AsyncStorage,getItem('email')
-    //         const userprofile =await AsyncStorage.getItem('userprofile')
-    //         const userprofile =JSON.parse(userprofile)
-            
-    //         if(userprofile!==null){
-    //             this.setState({ ...userprofile })
-
-    //         }
-    //         if(email!==null){
-    //             this.setState({ email })
-
-    //         }
-    //     }
-    //     catch(e){
-         
-                 
-    //     }
-    // }
-    
-
+   
     allFieldValidation = () => {
         const {  email, password } = this.state
         if (email == "") {
@@ -99,27 +43,27 @@ class Login extends Component {
             <ScrollView>
                 <View style={styles.container}>
                    
-                    <ComponentImage/>
+                 
                     <Text style={styles.text}>Login</Text>    
 
                     
                     <Input iconName="email" placeholder="Enter email" onChangeText={(text) => { this.validate(text) }}/>
                     {this.state.isEmailvalidate ? (
-                        <Text style={{ color: 'red'}}>
+                        <Text style={{ color: 'green', fontSize:20 }}>
                             {this.state.emailError}
                         </Text>
                     ) : (
-                        <Text style={{ color: 'red' }}>{this.state.emailError}</Text>
+                        <Text style={{ color: 'green',fontSize:20 }}>{this.state.emailError}</Text>
                     )}
 
 
                     <Input iconName="lock" placeholder="Enter password"  visible='true' onChangeText={(text) => { this.validatePassword(text) }} />
                     {this.state.isPasswordValidation ? (
-                        <Text style={{ color: 'red'}}>
+                        <Text style={{ color: 'green',fontSize:20}}>
                             {this.state.PasswordError}
                         </Text>
                     ) : (
-                        <Text style={{ color: 'red'}}>
+                        <Text style={{ color: 'green',fontSize:20}}>
                             {this.state.PasswordError}
                         </Text>
                         )}
@@ -127,7 +71,7 @@ class Login extends Component {
 
                     <ComponentButton label='Sign In' onPress={() => this.making_api_call_all_fields()}/>
 
-                     <Text style={styles.text1} onPress={()=>this.props.navigation.navigate('Register')}> Need You Have ? Create Account</Text> 
+                     <Text style={styles.text1} onPress={()=>this.props.navigation.navigate('Register')}> Need You Have Sign Up Here? Create Account</Text> 
                     
     
                     
@@ -178,7 +122,8 @@ const styles = StyleSheet.create({
     },
     
     text: {
-        top:-50,
+        marginTop:100,
+        marginBottom:50,
         color: 'black',
         fontWeight: 'bold',
         fontSize: 40,
@@ -189,7 +134,7 @@ const styles = StyleSheet.create({
         color:'red',
     },
     text1:{
-        paddingTop:40,
+        paddingTop:50,
         color:'blue',
         
         

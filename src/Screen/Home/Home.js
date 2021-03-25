@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { FlatList, StyleSheet, View, Text, Image, Button, TouchableOpacity } from 'react-native';
 import Right from 'react-native-vector-icons/dist/MaterialIcons';
-import Icon from 'react-native-vector-icons/dist/MaterialIcons';
+
 import ComponentButton from '../../component/Button/ComponentButton';
 
 
@@ -9,14 +9,14 @@ function Home({ navigation },props) {
 
     const [people, setpeople] = useState([
         { photo: require('../../assets/img/ironman.jpg'), name: 'IRON MAN ', email: 'i@gmail.com', id: '1' },
-        { photo: require('../../assets/img//hulk1.jpg'), name: 'HULK', email: 'h@gmail.com', id: '2' },
-        { photo: require('../../assets/img/captain.jpg'), name: 'CAPTAIN AMERICA', email: 'c@gmail.com', id: '3' },
+        { photo: require('../../assets/img/hulk.jpg'), name: 'HULK', email: 'h@gmail.com', id: '2' },
+        { photo: require('../../assets/img/captain3.png'), name: 'CAPTAIN', email: 'c@gmail.com', id: '3' },
 
     ]);
 
     return (
         <View style={styles.container}>
-        <Icon name="person" style={{fontSize:50}} onPress={() => navigation.navigate("UserProfile")}/>
+        
             <FlatList
                 numColumns={1}
                 keyExtractor={(item) => item.id}
@@ -54,7 +54,7 @@ function Home({ navigation },props) {
 }
 const styles = StyleSheet.create({
     container: {
-        marginHorizontal: 10,
+        marginHorizontal: 20,
     },
     img: {
         height: 100,

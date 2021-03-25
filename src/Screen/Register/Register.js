@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { View, StyleSheet, Text, ScrollView } from 'react-native';
 import Input from '../../component/Input/Input'
-import ComponentImage from '../../component/Image/ComponentImage';
 import ComponentButton from '../../component/Button/ComponentButton';
 import Pickers from '../../component/Picker/Picker';
 import AsyncStorage from '@react-native-async-storage/async-storage';
@@ -82,39 +81,39 @@ class Register extends Component {
         
             <View style={styles.container}>
 
-                <ComponentImage/>
+               
                 <Text style={styles.text}>Sign Up</Text>
 
                 <Input iconName="person-pin-circle" placeholder="Enter First name" 
                 onChangeText={(text) => { this.validateFirstName(text) }}/>
                 {this.state.isFirstvalidate ? (
-                    <Text style={{ color: 'red'}}>
+                    <Text style={{ color: 'green' , fontSize: 20}}>
                       {this.state.firstnamerror}
                     </Text>
                   ) : (
-                    <Text style={{ color: 'red'}}>{this.state.firstnamerror}</Text>
+                    <Text style={{ color: 'green',fontSize: 20}}>{this.state.firstnamerror}</Text>
                   )}
 
                 <Input iconName="person-pin-circle" placeholder="Enter Last name" 
                 onChangeText={(text) => { this.validateLastName(text) }}/>
 
                 {this.state.isLastvalidate ? (
-                    <Text style={{ color: 'red'}}>
+                    <Text style={{ color: 'green', fontSize: 20}}>
                       {this.state.lastnamerror}
                     </Text>
                   ) : (
-                    <Text style={{ color: 'red'}}>{this.state.lastnamerror}</Text>
+                    <Text style={{ color: 'green', fontSize: 20}}>{this.state.lastnamerror}</Text>
                   )}
 
 
                 <Input iconName="email" placeholder="Enter email" 
                 onChangeText={(text) => { this.validate(text) }}/>
                 {this.state.isEmailvalidate ? (
-                    <Text style={{ color: 'red' }}>
+                    <Text style={{ color: 'green' , fontSize: 20}}>
                         {this.state.emailError}
                     </Text>
                 ) : (
-                    <Text style={{ color: 'red' }}>{this.state.emailError}</Text>
+                    <Text style={{ color: 'green' ,fontSize: 20}}>{this.state.emailError}</Text>
                 )}
 
 
@@ -124,22 +123,22 @@ class Register extends Component {
                 onChangeText={(text) => { this.validatePhone(text) }}/>
 
                 {this.state.isPhoneValidate ? (
-                    <Text style={{ color: 'red' }}>
+                    <Text style={{ color: 'green' , fontSize: 20}}>
                       {this.state.phoneErrorValidation}
                     </Text>
                   ) : (
-                    <Text style={{ color: 'red' }}>{this.state.phoneErrorValidation}</Text>
+                    <Text style={{ color: 'green' , fontSize: 20}}>{this.state.phoneErrorValidation}</Text>
                   )}
 
                 <Input iconName="lock" placeholder="Enter password" visible='true' 
                 onChangeText={(text) => { this.validatePassword(text) }}/>
 
                 {this.state.isPasswordValidation ? (
-                    <Text style={{ color: 'red'}}>
+                    <Text style={{ color: 'green', fontSize: 20}}>
                         {this.state.PasswordError}
                     </Text>
                 ) : (
-                    <Text style={{ color: 'red'}}>
+                    <Text style={{ color: 'green', fontSize: 20}}>
                         {this.state.PasswordError}
                     </Text>
                     )}
@@ -148,11 +147,11 @@ class Register extends Component {
                 value={this.state.ConfirmPassword} onChangeText={(value) => { this.checked_Password(value) }}/>
 
                 {this.state.isConPassword ? (
-                  <Text style={{ color: 'red'}}>
+                  <Text style={{ color: 'green', fontSize: 20}}>
                     {this.state.ConPassword}
                 </Text>
                 ) : (
-                  <Text style={{ color: 'red'}}>
+                  <Text style={{ color: 'green', fontSize: 20}}>
                     {this.state.ConPassword}
                   </Text>)}
 
@@ -274,7 +273,8 @@ const styles = StyleSheet.create({
         justifyContent: "center",
     },
     text: {
-        top:-50,
+        marginTop:20,
+        marginBottom:30,
         color: 'black',
         fontWeight: 'bold',
         fontSize: 40,
