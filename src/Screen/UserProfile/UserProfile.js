@@ -89,7 +89,7 @@ const styles = StyleSheet.create({
     },
     footer: {
         height:600,
-        paddingTop:120,
+        paddingTop:80,
         alignItems: 'center',
         backgroundColor: '#ffffff',
         borderTopLeftRadius: 80,
