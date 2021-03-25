@@ -28,11 +28,13 @@ export default Pickers
 
 const styles = StyleSheet.create({
     inputview: {
-        backgroundColor: "#a4ebf3",
+     
+        backgroundColor: "#ffffff",
         borderRadius: 30,
-        width: "70%",
+        width: "80%",
         height: 45,
-        marginBottom: 20,
+        height: 60,
+        marginBottom: 40,
         flexDirection: 'row',
         alignItems: 'center',
         borderWidth: 2,
@@ -40,12 +42,13 @@ const styles = StyleSheet.create({
     },
     ic: {
 
-        fontSize: 20
+        fontSize: 25
     },
     input: {
-        fontSize: 20,
+        fontSize: 25,
         height: 50,
         flex: 1,
         marginLeft: 20,
+        
     },
 });

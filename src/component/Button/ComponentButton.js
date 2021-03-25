@@ -23,15 +23,16 @@ const styles = StyleSheet.create({
     btn: { 
         alignItems: "center",
         justifyContent: "center",
-        backgroundColor: "#a4ebf3",
+        backgroundColor: "#000000",
         fontWeight: 'bold',
         borderRadius: 20,
         borderWidth: 2,
-        width:150 ,
+        width:180 ,
         height:70,
 
     },
     text3: {
+        color:'white',
         fontSize: 20,
         fontWeight: 'bold',
     },

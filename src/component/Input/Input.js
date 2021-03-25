@@ -16,10 +16,10 @@ export default Input
 
 const styles = StyleSheet.create({
     inputview: {
-        backgroundColor: "#a4ebf3",
+        backgroundColor: "#ffffff",
         borderRadius: 30,
-        width: "70%",
-        height: 50,
+        width: "80%",
+        height: 60,
         marginBottom:20,
         flexDirection: 'row',
         alignItems: 'center',
@@ -28,7 +28,7 @@ const styles = StyleSheet.create({
     },
     ic: {
 
-        fontSize: 20
+        fontSize: 25
     },
     input: {
         fontSize: 20,
