@@ -5,6 +5,7 @@ import Input from '../../component/Input/Input'
 import ComponentButton from '../../component/Button/ComponentButton';
 import Pickers from '../../component/Picker/Picker';
 import AsyncStorage from '@react-native-async-storage/async-storage';
+import * as Animatable from 'react-native-animatable';
 
 class Register extends Component {
   constructor(props) {
@@ -86,7 +87,7 @@ class Register extends Component {
             <Text style={styles.text}>Sign Up</Text>
           </View>
 
-          <View style={styles.footer}>
+          <Animatable.View style={styles.footer} animation="fadeInUpBig" iterationDelay={500}>
 
             <Input iconName="person-pin-circle" placeholder="Enter First name"
               onChangeText={(text) => { this.validateFirstName(text) }} />
@@ -161,7 +162,7 @@ class Register extends Component {
 
             <ComponentButton label='Sign Up' onPress={() => this.making_api_call_all_fields()} />
 
-          </View>
+          </Animatable.View>
 
         </View>
       </ScrollView>

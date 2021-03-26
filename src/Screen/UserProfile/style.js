@@ -7,12 +7,12 @@ const styles = StyleSheet.create({
         width:'100%',
 
     },
-    text:{
-        marginTop:60,
-        fontSize:50,
-        fontWeight:'bold',
+    img:{
+        marginTop:30,
+        height:150,
+        width:150,
+        borderRadius:200,
         alignSelf:'center',
-        color: '#ffffff',
 
     },
     header: {

@@ -3,6 +3,7 @@ import { View, StyleSheet, Text, ScrollView } from 'react-native';
 import styles from './style';
 import Input from '../../component/Input/Input'
 import ComponentButton from '../../component/Button/ComponentButton'
+import * as Animatable from 'react-native-animatable';
 // import AsyncStorage from '@react-native-community/async-storage'
 
 
@@ -43,13 +44,20 @@ class Login extends Component {
 
     render() {
         return (
+       
             <ScrollView style={styles.container}>
                 {/* <View >*/}
 
+                
                     <View style={styles.header}>
                         <Text style={styles.text}>Login</Text>
                     </View>
-                    <View style={styles.footer}>
+
+                   
+                    <Animatable.View style={styles.footer} animation="fadeInUpBig" iterationDelay={500}>
+
+
+                   
                         <Input iconName="email" placeholder="Enter email" onChangeText={(text) => { this.validate(text) }} />
                         {this.state.isEmailvalidate ? (
                             <Text style={{ color: 'green', fontSize: 20 }}>
@@ -75,11 +83,15 @@ class Login extends Component {
                         <ComponentButton label='Sign In' onPress={() => this.making_api_call_all_fields()} />
 
                         <Text style={styles.text1} onPress={() => this.props.navigation.navigate('Register')}> Need You Have Account? Click Here </Text>
-                    </View>
-
+                        
+                       
+                    </Animatable.View>
+                    
+            
 
                 {/*</View>*/}
             </ScrollView>
+        
         )
     }
     validate = (text) => {

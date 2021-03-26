@@ -4,7 +4,8 @@ import styles from './style';
 import Input from '../../component/Input/Input'
 import ComponentButton from '../../component/Button/ComponentButton';
 import AsyncStorage from '@react-native-async-storage/async-storage';
-import { View, Text, StyleSheet, ScrollView } from "react-native";
+import { View, Text, StyleSheet, ScrollView,Image } from "react-native";
+import * as Animatable from 'react-native-animatable';
 
 class UserProfile extends Component {
     constructor(props) {
@@ -54,16 +55,16 @@ class UserProfile extends Component {
                 <View style={styles.container}>
 
                     <View style={styles.header}>
-                        <Text style={styles.text}> User Detail </Text>
+                        <Image style={styles.img} source={require('../../assets/img/ironman.jpg')}/>
                     </View>
 
-                    <View style={styles.footer}>
+                    <Animatable.View style={styles.footer} animation="fadeInUpBig" iterationDelay={500}>
                         <Input iconName="person-pin-circle" value={this.state.firstname} />
                         <Input iconName="person-pin-circle" value={this.state.lastname} />
                         <Input iconName="email" value={this.state.email} />
                         <Input iconName="contact-page" value={this.state.mobileno} />
                         <ComponentButton label="LOGOUT" onPress={() => this.props.navigation.navigate('Login')} />
-                    </View>
+                    </Animatable.View>
                 </View>
             </ScrollView>
         )
