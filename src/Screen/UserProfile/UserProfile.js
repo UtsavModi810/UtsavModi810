@@ -55,15 +55,19 @@ class UserProfile extends Component {
                 <View style={styles.container}>
 
                     <View style={styles.header}>
-                        <Image style={styles.img} source={require('../../assets/img/ironman.jpg')}/>
+                       
                     </View>
 
                     <Animatable.View style={styles.footer} animation="fadeInUpBig" iterationDelay={500}>
+                        <Image style={styles.img} source={require('../../assets/img/ironman.jpg')}/>
+                    <View style={styles.text}>
                         <Input iconName="person-pin-circle" value={this.state.firstname} />
                         <Input iconName="person-pin-circle" value={this.state.lastname} />
                         <Input iconName="email" value={this.state.email} />
                         <Input iconName="contact-page" value={this.state.mobileno} />
+                    </View>
                         <ComponentButton label="LOGOUT" onPress={() => this.props.navigation.navigate('Login')} />
+                     
                     </Animatable.View>
                 </View>
             </ScrollView>

@@ -8,7 +8,7 @@ const styles = StyleSheet.create({
 
     },
     img:{
-        marginTop:30,
+        marginTop:-70,
         height:150,
         width:150,
         borderRadius:200,
@@ -16,14 +16,18 @@ const styles = StyleSheet.create({
 
     },
     header: {
-        height: 200,
+        height: 130,
+    },
+    text:{
+        marginTop:50,
     },
     footer: {
         height:600,
-        paddingTop:80,
+
         alignItems: 'center',
         backgroundColor: '#ffffff',
         borderTopLeftRadius: 80,
+        borderTopRightRadius:80,
     },
    
 

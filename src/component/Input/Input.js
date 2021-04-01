@@ -17,9 +17,9 @@ export default Input
 const styles = StyleSheet.create({
     inputview: {
         backgroundColor: "#ffffff",
-        borderRadius: 30,
+        borderRadius: 20,
         width: "80%",
-        height: 60,
+        height: 55,
         marginBottom:20,
         flexDirection: 'row',
         alignItems: 'center',

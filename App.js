@@ -11,6 +11,7 @@ import Auth from './src/Authentication/Auth';
 import UserProfile from "./src/Screen/UserProfile/UserProfile";
 import Icon from 'react-native-vector-icons/dist/MaterialIcons';
 import { TouchableOpacity } from 'react-native';
+import Bottomtab from './src/Screen/Bottomtab/Bottomtab';
 
 
 
@@ -29,7 +30,7 @@ const App = () => {
   return (
     // <SplashScreen/>
     <NavigationContainer>
-      <Stack.Navigator>
+      <Stack.Navigator initialRouteName="Home">
         <Stack.Screen name="Login" component={Login} options={{
           headerShown: false
 
@@ -38,7 +39,7 @@ const App = () => {
         <Stack.Screen name="Register" component={Register} options={{}} />
         <Stack.Screen name="Auth" component={Auth} options={{ headerShow:false }} />
         <Stack.Screen name="HomeDetail" component={HomeDetail} options={{}} />
-        <Stack.Screen name="Home" component={Home} options={({ navigation }) => ({
+        <Stack.Screen name="Home" component={Bottomtab} options={({ navigation }) => ({
           title: 'Home',
             headerStyle: {
               backgroundColor: '#fff',

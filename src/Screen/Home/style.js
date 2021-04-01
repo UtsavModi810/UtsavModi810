@@ -5,10 +5,12 @@ const styles = StyleSheet.create({
         marginHorizontal: 20,
     },
     img: {
-        height: 100,
-        width: 100,
-        resizeMode: 'center',
-        borderRadius: 100 / 2,
+        height: 90,
+        width: 90,
+        marginTop:5,
+        marginLeft:5,
+        resizeMode: 'contain',
+        borderRadius: 90 / 2,
     },
     show: {
         height: 100,
@@ -30,9 +32,8 @@ const styles = StyleSheet.create({
     text: {
 
         flex: 1,
-        flexDirection: "column",
+        flexDirection: "row",
         flexWrap: "wrap",
-        marginTop: 20,
         marginLeft: 20,
     },
 
